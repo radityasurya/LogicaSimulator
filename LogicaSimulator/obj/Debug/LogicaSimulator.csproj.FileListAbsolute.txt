@@ -7,3 +7,6 @@ D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator
 D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.csproj.GenerateResource.Cache
 D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.exe
 D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.pdb
+D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\bin\Debug\LogicaSimulator.exe.config
+D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.exe
+D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.pdb
