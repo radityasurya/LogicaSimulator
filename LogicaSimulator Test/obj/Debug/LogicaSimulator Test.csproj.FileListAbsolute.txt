@@ -1,0 +1,9 @@
+D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator Test\bin\Debug\LogicaSimulator Test.dll
+D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator Test\bin\Debug\LogicaSimulator Test.pdb
+D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator Test\bin\Debug\LogicaSimulator.exe
+D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator Test\bin\Debug\LogicaSimulator.pdb
+D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator Test\obj\Debug\LogicaSimulator Test.csprojResolveAssemblyReference.cache
+D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator Test\obj\Debug\LogicaSimulator Test.dll
+D:\school\Blok 13\ALE1\LogicaSimulator\LogicaSimulator Test\obj\Debug\LogicaSimulator Test.pdb
