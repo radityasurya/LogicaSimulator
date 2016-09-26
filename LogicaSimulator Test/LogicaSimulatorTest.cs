@@ -15,28 +15,29 @@ namespace LogicaSimulator_Test
         {
             string prefixFormula = "=( >(A,B), |( ~(A) ,B) )";
             string prefixFormula2 = "&( ( |(A, ~(B) ), C)";
+            string prefixFormula3 = "&( ( &(A, ~B) ), C)";
+            string prefixFormula4 = "&( ( & (A, ~(B) ), &((C, &(D,&(E,G)))))";
+            string prefixFormula5 = "&(A, C)";
 
             Assert.AreEqual("( A ⇒ B ) ⇔ ( ( ¬ A ) ⋁ B ) ", toInfix(prefixFormula));
             Assert.AreEqual("( A ⋁ ( ¬ B ) ) ⋀ C ", toInfix(prefixFormula2));
+            Assert.AreEqual("( A ⋀ ( ¬ B ) ) ⋀ C ", toInfix(prefixFormula3));
+            Assert.AreEqual("( A ⋀ ( ¬ B ) ) ⋀ ( C ⋀ ( D ⋀ ( E ⋀ G ) ) ) ", toInfix(prefixFormula4));
+            Assert.AreEqual("A ⋀ C ", toInfix(prefixFormula5));
+
         }
 
         [TestMethod]
         public void GenerateHashTest()
         {
             string prefixFormula = "&( ( |(A, ~(B) ), C)";
-            Formula formula = new Formula(prefixFormula, "prefix");
-            string pref = prefixFormula.Replace(@" ", "")
-                .Replace("(", "")
-                .Replace(")", "")
-                .Replace(",", "")
-                .Trim();
-            formula.getVariables(pref);
-            List<string> prefixList = formula.getPrefixList(pref);
+            string prefixFormula2 = "&( ( &(A, ~B) ), C";
+            string prefixFormula3 = "&(A, C)";
 
-            List<Node> Nodes = formula.generateNodes(prefixList);
-            formula.nodes.Reverse();
-            List<string> tempRowList = formula.getTruthTableValue();
-            Assert.AreEqual("A2", formula.getHash());
+            Assert.AreEqual("A2", getHash(prefixFormula));
+            Assert.AreEqual("20", getHash(prefixFormula2));
+            Assert.AreEqual("8", getHash(prefixFormula3));
+
         }
 
         [TestMethod]
@@ -140,6 +141,22 @@ namespace LogicaSimulator_Test
             Nodes.Reverse();
 
             return formula.toInfix(Nodes[0], null);
+        }
+
+        public string getHash(string prefixFormula) {
+            Formula formula = new Formula(prefixFormula, "prefix");
+            string pref = prefixFormula.Replace(@" ", "")
+                .Replace("(", "")
+                .Replace(")", "")
+                .Replace(",", "")
+                .Trim();
+            formula.getVariables(pref);
+            List<string> prefixList = formula.getPrefixList(pref);
+
+            List<Node> Nodes = formula.generateNodes(prefixList);
+            formula.nodes.Reverse();
+            List<string> tempRowList = formula.getTruthTableValue();
+            return formula.getHash();
         }
 
     }

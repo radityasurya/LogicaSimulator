@@ -19,3 +19,9 @@ D:\school\Blok 13\ALE1\CANVAS\LogicaSimulator\obj\Debug\LogicaSimulator.csprojRe
 D:\school\Blok 13\ALE1\CANVAS\LogicaSimulator\obj\Debug\LogicaSimulator.MainForm.resources
 D:\school\Blok 13\ALE1\CANVAS\LogicaSimulator\obj\Debug\LogicaSimulator.Properties.Resources.resources
 D:\school\Blok 13\ALE1\CANVAS\LogicaSimulator\obj\Debug\LogicaSimulator.csproj.GenerateResource.Cache
+D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\bin\Debug\LogicaSimulator.exe
+D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\bin\Debug\LogicaSimulator.pdb
+D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.csprojResolveAssemblyReference.cache
+D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.MainForm.resources
+D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.Properties.Resources.resources
+D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.csproj.GenerateResource.Cache

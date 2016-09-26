@@ -116,10 +116,11 @@ namespace LogicaSimulator
 
             Hash = new string(chars);
 
-            int divider = Hash.Length % 4;
-            if (divider != 0)
+            int modulo = Hash.Length % 4;
+            if (modulo != 0)
             {
-                Hash = new string('0', 4 - divider) + Hash;
+                // pad to length multiple of 4
+                Hash = new string('0', 4 - modulo) + Hash;
             }
 
             string hash = "";
