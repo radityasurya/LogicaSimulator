@@ -114,6 +114,8 @@
             // tbHash
             // 
             this.tbHash.BackColor = System.Drawing.Color.Firebrick;
+            this.tbHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHash.ForeColor = System.Drawing.Color.White;
             this.tbHash.Location = new System.Drawing.Point(160, 135);
             this.tbHash.Name = "tbHash";
             this.tbHash.Size = new System.Drawing.Size(103, 20);
@@ -208,7 +210,7 @@
             // lbSimplified
             // 
             this.lbSimplified.FormattingEnabled = true;
-            this.lbSimplified.Location = new System.Drawing.Point(137, 36);
+            this.lbSimplified.Location = new System.Drawing.Point(290, 36);
             this.lbSimplified.Name = "lbSimplified";
             this.lbSimplified.Size = new System.Drawing.Size(109, 186);
             this.lbSimplified.TabIndex = 3;
@@ -216,7 +218,7 @@
             // lbSimple
             // 
             this.lbSimple.AutoSize = true;
-            this.lbSimple.Location = new System.Drawing.Point(134, 20);
+            this.lbSimple.Location = new System.Drawing.Point(287, 20);
             this.lbSimple.Name = "lbSimple";
             this.lbSimple.Size = new System.Drawing.Size(109, 13);
             this.lbSimple.TabIndex = 2;
@@ -228,7 +230,7 @@
             this.lbTruth.FormattingEnabled = true;
             this.lbTruth.Location = new System.Drawing.Point(19, 36);
             this.lbTruth.Name = "lbTruth";
-            this.lbTruth.Size = new System.Drawing.Size(109, 186);
+            this.lbTruth.Size = new System.Drawing.Size(265, 186);
             this.lbTruth.TabIndex = 1;
             this.lbTruth.ValueMember = "listBox";
             // 

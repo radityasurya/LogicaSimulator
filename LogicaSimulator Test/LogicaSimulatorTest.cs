@@ -10,11 +10,39 @@ namespace LogicaSimulator_Test
     [TestClass]
     public class LogicaSimulatorTest
     {
+        [TestMethod]
+        public void PropositionTest()
+        {
+            string prefixFormula = "=( >(A,B), |( ~(A) ,B) )";
+            string prefixFormula2 = "&( ( |(A, ~(B) ), C)";
+
+            Assert.AreEqual("( A ⇒ B ) ⇔ ( ( ¬ A ) ⋁ B ) ", toInfix(prefixFormula));
+            Assert.AreEqual("( A ⋁ ( ¬ B ) ) ⋀ C ", toInfix(prefixFormula2));
+        }
+
+        [TestMethod]
+        public void GenerateHashTest()
+        {
+            string prefixFormula = "&( ( |(A, ~(B) ), C)";
+            Formula formula = new Formula(prefixFormula, "prefix");
+            string pref = prefixFormula.Replace(@" ", "")
+                .Replace("(", "")
+                .Replace(")", "")
+                .Replace(",", "")
+                .Trim();
+            formula.getVariables(pref);
+            List<string> prefixList = formula.getPrefixList(pref);
+
+            List<Node> Nodes = formula.generateNodes(prefixList);
+            formula.nodes.Reverse();
+            List<string> tempRowList = formula.getTruthTableValue();
+            Assert.AreEqual("A2", formula.getHash());
+        }
 
         [TestMethod]
         public void GetVariableTest()
         {
-            string prefixFormula = "=( >(A,B), |( ~(A) ,B) )";
+            string prefixFormula = "=( >(B,A), |( ~(B) ,A) )";
 
             string formulaVariables = "";
             Formula formula = new Formula(prefixFormula, "prefix");
@@ -93,5 +121,26 @@ namespace LogicaSimulator_Test
 
             Assert.IsTrue(exists);
         }
+
+        public string toInfix(string prefix)
+        {
+
+            Formula formula = new Formula(prefix, "prefix");
+
+            string pref = prefix.Replace(@" ", "")
+                .Replace("(", "")
+                .Replace(")", "")
+                .Replace(",", "")
+                .Trim();
+
+            List<string> prefixList = formula.getPrefixList(pref);
+
+            List<Node> Nodes = formula.generateNodes(prefixList);
+
+            Nodes.Reverse();
+
+            return formula.toInfix(Nodes[0], null);
+        }
+
     }
 }
