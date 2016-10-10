@@ -25,3 +25,12 @@ D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.csprojR
 D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.MainForm.resources
 D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.Properties.Resources.resources
 D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.csproj.GenerateResource.Cache
+D:\school\Blok 13\ALE1\REPO\LogicaSimulator\LogicaSimulator\bin\Debug\LogicaSimulator.exe.config
+D:\school\Blok 13\ALE1\REPO\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.exe
+D:\school\Blok 13\ALE1\REPO\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.pdb
+D:\school\Blok 13\ALE1\REPO\LogicaSimulator\LogicaSimulator\bin\Debug\LogicaSimulator.exe
+D:\school\Blok 13\ALE1\REPO\LogicaSimulator\LogicaSimulator\bin\Debug\LogicaSimulator.pdb
+D:\school\Blok 13\ALE1\REPO\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.csprojResolveAssemblyReference.cache
+D:\school\Blok 13\ALE1\REPO\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.MainForm.resources
+D:\school\Blok 13\ALE1\REPO\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.Properties.Resources.resources
+D:\school\Blok 13\ALE1\REPO\LogicaSimulator\LogicaSimulator\obj\Debug\LogicaSimulator.csproj.GenerateResource.Cache

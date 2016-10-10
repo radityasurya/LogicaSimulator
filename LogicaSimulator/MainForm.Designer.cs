@@ -83,8 +83,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.lbSimple);
             this.splitContainer1.Panel2.Controls.Add(this.lbTruth);
             this.splitContainer1.Panel2.Controls.Add(this.lbTruthTable);
-            this.splitContainer1.Size = new System.Drawing.Size(784, 613);
-            this.splitContainer1.SplitterDistance = 289;
+            this.splitContainer1.Size = new System.Drawing.Size(1112, 613);
+            this.splitContainer1.SplitterDistance = 409;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnViewTree
@@ -212,7 +212,7 @@
             this.lbSimplified.FormattingEnabled = true;
             this.lbSimplified.Location = new System.Drawing.Point(290, 36);
             this.lbSimplified.Name = "lbSimplified";
-            this.lbSimplified.Size = new System.Drawing.Size(109, 186);
+            this.lbSimplified.Size = new System.Drawing.Size(257, 186);
             this.lbSimplified.TabIndex = 3;
             // 
             // lbSimple
@@ -248,7 +248,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 613);
+            this.ClientSize = new System.Drawing.Size(1112, 613);
             this.Controls.Add(this.splitContainer1);
             this.Name = "MainForm";
             this.Text = "Logica Simulator";
