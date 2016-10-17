@@ -17,13 +17,16 @@ namespace LogicaSimulator
         // Properties
         private Formula formula;
         private SimplifyFormula simplifyFormula;
+        private DisjunctiveFormula disjunctiveFormula;
         private FileHelper fh;
         private List<string[]> ListToSimplify;
         private List<string> tempRowList;
+        private List<string> tempSimpleList;
 
         public MainForm()
         {
             ListToSimplify = new List<string[]>();
+            tempSimpleList = new List<string>();
 
             InitializeComponent();
             fh = new FileHelper();
@@ -56,6 +59,12 @@ namespace LogicaSimulator
             // Simplify Table
             simplifyTable();
 
+            // Get Disjunctive;
+            disjunctiveFormula = new DisjunctiveFormula(tempRowList, tbVariables.Text.ToList(), tempSimpleList);
+            tbDisInfix.Text = disjunctiveFormula.DisjunctiveFormInfix;
+            tbDisPrefix.Text = disjunctiveFormula.DisjunctiveFormPrefix;
+            tbSimpleDisInfix.Text = disjunctiveFormula.SimpleDisjunctiveFormInfix;
+            tbSimpleDisPrefix.Text = disjunctiveFormula.SimpleDisjunctiveFormPrefix;
         }
 
         private string getInfix(string prefix)
@@ -150,17 +159,18 @@ namespace LogicaSimulator
                 {
                     if (j == 0 )
                     {
-                        tempRow = simplifyFormula.SimplifiedList[i][j]; 
+                        tempRow = simplifyFormula.SimplifiedList[i][j];
+                        tempSimpleList.Add(simplifyFormula.SimplifiedList[i][j]);
                     } else
                     {
                         tempRow += "       ";
                         tempRow += simplifyFormula.SimplifiedList[i][j];
+                        tempSimpleList.Add(simplifyFormula.SimplifiedList[i][j]);
                     }
                 }
 
                 lbSimplified.Items.Add(tempRow);
             }
-
         }
 
         private void btnViewTree_Click(object sender, EventArgs e)
