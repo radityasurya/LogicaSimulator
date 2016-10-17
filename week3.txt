@@ -5,3 +5,29 @@
 * 0 0 -> 0
 1 0 * -> 0
 1 1 * -> 1
+
+
+WEEK4
+ambil yang outputnya 1
+
+ABC Output
+000 1 --> (~A & ~B & ~C)
+001 0 
+010 1 --> (~A & B & ~C)
+011 1 --> (~A & B & C)
+DISJUNC NORMAL
+(~A & ~B & ~C) | (~A & B & ~C) | (~A & B & C)
+
+PUT ON THE HASH CODE
+disj-normal : 9F
+simplified : 9F
+
+0000
+0011
+0101
+0111
+1001
+1011
+1101
+1111
+

@@ -24,7 +24,7 @@ namespace LogicaSimulator
                 rows[counter] = TruthTableList[i];
                 counter++;
 
-                if (counter > 3)
+                if (counter > Variables.Count)
                 {
                     counter = 0;
                     ListToSimplify.Add(rows);

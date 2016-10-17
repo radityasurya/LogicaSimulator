@@ -25,3 +25,12 @@ D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator Test\bin\Debug\Microsoft.VisualSt
 D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator Test\obj\Debug\LogicaSimulator Test.csprojResolveAssemblyReference.cache
 D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator Test\obj\Debug\LogicaSimulator Test.dll
 D:\FONTYS\ALE1\LogicaSimulator\LogicaSimulator Test\obj\Debug\LogicaSimulator Test.pdb
+D:\Canvas\LogicaSimulator\LogicaSimulator Test\bin\Debug\LogicaSimulator Test.dll
+D:\Canvas\LogicaSimulator\LogicaSimulator Test\bin\Debug\LogicaSimulator Test.pdb
+D:\Canvas\LogicaSimulator\LogicaSimulator Test\bin\Debug\LogicaSimulator.exe
+D:\Canvas\LogicaSimulator\LogicaSimulator Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Canvas\LogicaSimulator\LogicaSimulator Test\bin\Debug\LogicaSimulator.pdb
+D:\Canvas\LogicaSimulator\LogicaSimulator Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Canvas\LogicaSimulator\LogicaSimulator Test\obj\Debug\LogicaSimulator Test.csprojResolveAssemblyReference.cache
+D:\Canvas\LogicaSimulator\LogicaSimulator Test\obj\Debug\LogicaSimulator Test.dll
+D:\Canvas\LogicaSimulator\LogicaSimulator Test\obj\Debug\LogicaSimulator Test.pdb

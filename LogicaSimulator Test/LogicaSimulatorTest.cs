@@ -123,6 +123,65 @@ namespace LogicaSimulator_Test
             Assert.IsTrue(exists);
         }
 
+        [TestMethod]
+        public void TestTruthTable() {
+            string prefixFormula = "=( >(A,B), |( ~(A) ,B) )";
+
+            Formula formula = new Formula(prefixFormula, "prefix");
+
+            string formulaVariables = formula.getVariables(prefixFormula);
+            List<string> prefixList = formula.getPrefixList(prefixFormula);
+            List<Node> Nodes = formula.generateNodes(prefixList);
+            //List<string> tempRowList = formula.getTruthTableValue();
+            Nodes.Reverse();
+            List<string> expectedTruthTable = new List<string>();
+
+            expectedTruthTable.Add("0");
+            expectedTruthTable.Add("0");
+            expectedTruthTable.Add("0");
+            expectedTruthTable.Add("0");
+
+            expectedTruthTable.Add("0");
+            expectedTruthTable.Add("0");
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("1");
+
+            expectedTruthTable.Add("0");
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("0");
+            expectedTruthTable.Add("1");
+            
+            expectedTruthTable.Add("0");
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("1");
+
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("0");
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("1");
+
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("0");
+            expectedTruthTable.Add("1");
+
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("1");
+            expectedTruthTable.Add("1");
+            
+            //List<string> tempRowList = formula.getTruthTableValue();
+
+            //Assert.AreEqual(expectedTruthTable, tempRowList);
+
+        }
+
+        [TestMethod]
+        public void TestSimplifiedTable() {
+
+        }
+
         public string toInfix(string prefix)
         {
 
