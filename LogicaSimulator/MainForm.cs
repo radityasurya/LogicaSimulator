@@ -18,6 +18,8 @@ namespace LogicaSimulator
         private Formula formula;
         private SimplifyFormula simplifyFormula;
         private DisjunctiveFormula disjunctiveFormula;
+        private NandifyFormula nandifyFormula;
+        private List<Node> Nodes;
         private FileHelper fh;
         private List<string[]> ListToSimplify;
         private List<string> tempRowList;
@@ -27,6 +29,7 @@ namespace LogicaSimulator
         {
             ListToSimplify = new List<string[]>();
             tempSimpleList = new List<string>();
+            Nodes = new List<Node>();
 
             InitializeComponent();
             fh = new FileHelper();
@@ -40,6 +43,13 @@ namespace LogicaSimulator
         {
             lbTruth.Items.Clear();
             lbSimplified.Items.Clear();
+            tempSimpleList.Clear();
+
+            tbDisInfix.Text = "";
+            tbDisPrefix.Text = "";
+            tbSimpleDisInfix.Text = "";
+            tbSimpleDisPrefix.Text = "";
+
             string formulaText = tbPrefix.Text;
             formula = new Formula(formulaText, "prefix");
             formulaText = formula.getVariables(formulaText);
@@ -65,6 +75,18 @@ namespace LogicaSimulator
             tbDisPrefix.Text = disjunctiveFormula.DisjunctiveFormPrefix;
             tbSimpleDisInfix.Text = disjunctiveFormula.SimpleDisjunctiveFormInfix;
             tbSimpleDisPrefix.Text = disjunctiveFormula.SimpleDisjunctiveFormPrefix;
+
+            // Get NAnd
+            nandifyFormula = new NandifyFormula(Nodes, tbDisPrefix.Text, tbSimpleDisPrefix.Text);
+            nandifyFormula.getNandForm();
+            tbN.Text = nandifyFormula.Nand;
+            tbNandHash.Text = tbHash.Text;
+
+            tbNdisjunc.Text = nandifyFormula.NandDisjunc;
+            tbNandDisjuncHash.Text = getHash(tbDisPrefix.Text);
+
+            tbNSimple.Text = nandifyFormula.NandSimple;
+            tbNandSimpleHash.Text = getHash(tbSimpleDisPrefix.Text);
         }
 
         private string getInfix(string prefix)
@@ -79,10 +101,9 @@ namespace LogicaSimulator
 
             List<string> prefixList = formula.getPrefixList(pref);
 
-            List<Node> Nodes = formula.generateNodes(prefixList);
+            Nodes = formula.generateNodes(prefixList);
 
             Nodes.Reverse();
-
 
             // Generate DOT
             fh.GenerateDot(Nodes);
@@ -173,6 +194,22 @@ namespace LogicaSimulator
             }
         }
 
+        public string getHash(string prefix)
+        {
+            Formula tempFormula = new Formula(prefix, "prefix");
+            string tempPref = prefix.Replace(@" ", "")
+                .Replace("(", "")
+                .Replace(")", "")
+                .Replace(",", "")
+                .Trim();
+            tempFormula.getVariables(tempPref);
+            List<string> tempPrefixList = tempFormula.getPrefixList(tempPref);
+
+            List<Node> tempNodes = tempFormula.generateNodes(tempPrefixList);
+            tempFormula.nodes.Reverse();
+            List<string> _tempRowList = tempFormula.getTruthTableValue();
+            return tempFormula.getHash();
+        }
         private void btnViewTree_Click(object sender, EventArgs e)
         {
             fh.openGraph();

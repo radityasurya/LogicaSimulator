@@ -33,7 +33,7 @@ namespace LogicaSimulator
         public void getDisjunctiveForm()
         {
             DisjunctiveFormElements.Clear();
-            DisjunctiveFormInfix = string.Empty;
+            DisjunctiveFormInfix = "";
             this.getDisjunctiveFormInfix(0);
             //in case of contradiction or a tautology.
             if (this.DisjunctiveFormElements.Count > 0)
@@ -47,7 +47,7 @@ namespace LogicaSimulator
             }
 
             DisjunctiveFormElements.Clear();
-            DisjunctiveFormPrefix = string.Empty;
+            DisjunctiveFormPrefix = "";
             this.getDisjunctiveFormPrefix(0);
             //in case of contradiction or a tautology.
             if (this.DisjunctiveFormElements.Count > 0)
@@ -62,7 +62,7 @@ namespace LogicaSimulator
 
             // Simplified Disjunctive
             DisjunctiveFormElements.Clear();
-            SimpleDisjunctiveFormInfix = string.Empty;
+            SimpleDisjunctiveFormInfix = "";
             this.getSimpleDisjunctiveFormInfix(0);
             //in case of contradiction or a tautology.
             if (this.DisjunctiveFormElements.Count > 0)
@@ -76,7 +76,7 @@ namespace LogicaSimulator
             }
 
             DisjunctiveFormElements.Clear();
-            SimpleDisjunctiveFormPrefix = string.Empty;
+            SimpleDisjunctiveFormPrefix = "";
             this.getSimpleDisjunctiveFormPrefix(0);
             
             //in case of contradiction or a tautology.
@@ -89,7 +89,6 @@ namespace LogicaSimulator
                 else
                     this.SimpleDisjunctiveFormPrefix = "0";
             }
-
 
         }
 

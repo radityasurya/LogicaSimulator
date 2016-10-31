@@ -12,12 +12,14 @@ namespace LogicaSimulator
         public Node Right { get; set; }
         public Node Left { get; set; }
         public bool Value { get; set; }
+        public string NANDPRefix { get; set; }
 
         public Node(string label, Node left, Node Right )
         {
             this.Label = label;
             this.Left = left;
             this.Right = Right;
+            NANDPRefix = "";
         }
 
         public Node(string label)

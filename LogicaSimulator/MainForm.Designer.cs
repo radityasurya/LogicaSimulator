@@ -29,6 +29,20 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tbNSimple = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbNdisjunc = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbN = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbSimpleDisInfix = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbSimpleDisPrefix = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbDisInfix = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbDisPrefix = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnViewTree = new System.Windows.Forms.Button();
             this.btnParse = new System.Windows.Forms.Button();
             this.tbHash = new System.Windows.Forms.TextBox();
@@ -39,21 +53,18 @@
             this.lbInfix = new System.Windows.Forms.Label();
             this.tbPrefix = new System.Windows.Forms.TextBox();
             this.lbPrefix = new System.Windows.Forms.Label();
-            this.btnRandom = new System.Windows.Forms.Button();
             this.pbTree = new System.Windows.Forms.PictureBox();
             this.lbTree = new System.Windows.Forms.Label();
             this.lbSimplified = new System.Windows.Forms.ListBox();
             this.lbSimple = new System.Windows.Forms.Label();
             this.lbTruth = new System.Windows.Forms.ListBox();
             this.lbTruthTable = new System.Windows.Forms.Label();
-            this.tbDisInfix = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbDisPrefix = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbSimpleDisInfix = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbSimpleDisPrefix = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tbNandHash = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbNandDisjuncHash = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbNandSimpleHash = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,6 +81,18 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.splitContainer1.Panel1.Controls.Add(this.tbNandSimpleHash);
+            this.splitContainer1.Panel1.Controls.Add(this.label10);
+            this.splitContainer1.Panel1.Controls.Add(this.tbNandDisjuncHash);
+            this.splitContainer1.Panel1.Controls.Add(this.label9);
+            this.splitContainer1.Panel1.Controls.Add(this.tbNandHash);
+            this.splitContainer1.Panel1.Controls.Add(this.label8);
+            this.splitContainer1.Panel1.Controls.Add(this.tbNSimple);
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
+            this.splitContainer1.Panel1.Controls.Add(this.tbNdisjunc);
+            this.splitContainer1.Panel1.Controls.Add(this.label6);
+            this.splitContainer1.Panel1.Controls.Add(this.tbN);
+            this.splitContainer1.Panel1.Controls.Add(this.label7);
             this.splitContainer1.Panel1.Controls.Add(this.tbSimpleDisInfix);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.tbSimpleDisPrefix);
@@ -88,7 +111,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.lbInfix);
             this.splitContainer1.Panel1.Controls.Add(this.tbPrefix);
             this.splitContainer1.Panel1.Controls.Add(this.lbPrefix);
-            this.splitContainer1.Panel1.Controls.Add(this.btnRandom);
             // 
             // splitContainer1.Panel2
             // 
@@ -99,17 +121,136 @@
             this.splitContainer1.Panel2.Controls.Add(this.lbSimple);
             this.splitContainer1.Panel2.Controls.Add(this.lbTruth);
             this.splitContainer1.Panel2.Controls.Add(this.lbTruthTable);
-            this.splitContainer1.Size = new System.Drawing.Size(1112, 613);
-            this.splitContainer1.SplitterDistance = 518;
+            this.splitContainer1.Size = new System.Drawing.Size(1260, 613);
+            this.splitContainer1.SplitterDistance = 689;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // tbNSimple
+            // 
+            this.tbNSimple.BackColor = System.Drawing.Color.Cyan;
+            this.tbNSimple.Location = new System.Drawing.Point(29, 433);
+            this.tbNSimple.Name = "tbNSimple";
+            this.tbNSimple.Size = new System.Drawing.Size(505, 20);
+            this.tbNSimple.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 417);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "NAND Simplified Prefix";
+            // 
+            // tbNdisjunc
+            // 
+            this.tbNdisjunc.BackColor = System.Drawing.Color.Cyan;
+            this.tbNdisjunc.Location = new System.Drawing.Point(29, 384);
+            this.tbNdisjunc.Name = "tbNdisjunc";
+            this.tbNdisjunc.Size = new System.Drawing.Size(505, 20);
+            this.tbNdisjunc.TabIndex = 22;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(26, 368);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "NAND DisJunc Prefix";
+            // 
+            // tbN
+            // 
+            this.tbN.BackColor = System.Drawing.Color.Cyan;
+            this.tbN.Location = new System.Drawing.Point(29, 334);
+            this.tbN.Name = "tbN";
+            this.tbN.Size = new System.Drawing.Size(505, 20);
+            this.tbN.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(26, 318);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "NAND Prefix";
+            // 
+            // tbSimpleDisInfix
+            // 
+            this.tbSimpleDisInfix.BackColor = System.Drawing.Color.SkyBlue;
+            this.tbSimpleDisInfix.Location = new System.Drawing.Point(29, 284);
+            this.tbSimpleDisInfix.Name = "tbSimpleDisInfix";
+            this.tbSimpleDisInfix.Size = new System.Drawing.Size(625, 20);
+            this.tbSimpleDisInfix.TabIndex = 18;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 268);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Simplified DisJunc Infix";
+            // 
+            // tbSimpleDisPrefix
+            // 
+            this.tbSimpleDisPrefix.BackColor = System.Drawing.Color.SkyBlue;
+            this.tbSimpleDisPrefix.Location = new System.Drawing.Point(29, 235);
+            this.tbSimpleDisPrefix.Name = "tbSimpleDisPrefix";
+            this.tbSimpleDisPrefix.Size = new System.Drawing.Size(625, 20);
+            this.tbSimpleDisPrefix.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 219);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Simplified DisJunc Prefix";
+            // 
+            // tbDisInfix
+            // 
+            this.tbDisInfix.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tbDisInfix.Location = new System.Drawing.Point(29, 185);
+            this.tbDisInfix.Name = "tbDisInfix";
+            this.tbDisInfix.Size = new System.Drawing.Size(625, 20);
+            this.tbDisInfix.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "DisJunc Infix";
+            // 
+            // tbDisPrefix
+            // 
+            this.tbDisPrefix.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tbDisPrefix.Location = new System.Drawing.Point(29, 136);
+            this.tbDisPrefix.Name = "tbDisPrefix";
+            this.tbDisPrefix.Size = new System.Drawing.Size(625, 20);
+            this.tbDisPrefix.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "DisJunc Prefix";
             // 
             // btnViewTree
             // 
             this.btnViewTree.BackColor = System.Drawing.Color.DimGray;
             this.btnViewTree.ForeColor = System.Drawing.Color.White;
-            this.btnViewTree.Location = new System.Drawing.Point(29, 510);
+            this.btnViewTree.Location = new System.Drawing.Point(104, 526);
             this.btnViewTree.Name = "btnViewTree";
-            this.btnViewTree.Size = new System.Drawing.Size(236, 38);
+            this.btnViewTree.Size = new System.Drawing.Size(464, 38);
             this.btnViewTree.TabIndex = 10;
             this.btnViewTree.Text = "View Tree";
             this.btnViewTree.UseVisualStyleBackColor = false;
@@ -119,9 +260,9 @@
             // 
             this.btnParse.BackColor = System.Drawing.Color.DimGray;
             this.btnParse.ForeColor = System.Drawing.Color.White;
-            this.btnParse.Location = new System.Drawing.Point(29, 422);
+            this.btnParse.Location = new System.Drawing.Point(104, 482);
             this.btnParse.Name = "btnParse";
-            this.btnParse.Size = new System.Drawing.Size(236, 38);
+            this.btnParse.Size = new System.Drawing.Size(464, 38);
             this.btnParse.TabIndex = 9;
             this.btnParse.Text = "Parse";
             this.btnParse.UseVisualStyleBackColor = false;
@@ -132,7 +273,7 @@
             this.tbHash.BackColor = System.Drawing.Color.Firebrick;
             this.tbHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbHash.ForeColor = System.Drawing.Color.White;
-            this.tbHash.Location = new System.Drawing.Point(160, 135);
+            this.tbHash.Location = new System.Drawing.Point(431, 85);
             this.tbHash.Name = "tbHash";
             this.tbHash.Size = new System.Drawing.Size(103, 20);
             this.tbHash.TabIndex = 8;
@@ -140,7 +281,7 @@
             // lbHash
             // 
             this.lbHash.AutoSize = true;
-            this.lbHash.Location = new System.Drawing.Point(157, 119);
+            this.lbHash.Location = new System.Drawing.Point(428, 69);
             this.lbHash.Name = "lbHash";
             this.lbHash.Size = new System.Drawing.Size(32, 13);
             this.lbHash.TabIndex = 7;
@@ -148,7 +289,7 @@
             // 
             // tbVariables
             // 
-            this.tbVariables.Location = new System.Drawing.Point(29, 135);
+            this.tbVariables.Location = new System.Drawing.Point(300, 85);
             this.tbVariables.Name = "tbVariables";
             this.tbVariables.Size = new System.Drawing.Size(125, 20);
             this.tbVariables.TabIndex = 6;
@@ -156,7 +297,7 @@
             // lbVariables
             // 
             this.lbVariables.AutoSize = true;
-            this.lbVariables.Location = new System.Drawing.Point(26, 119);
+            this.lbVariables.Location = new System.Drawing.Point(297, 69);
             this.lbVariables.Name = "lbVariables";
             this.lbVariables.Size = new System.Drawing.Size(50, 13);
             this.lbVariables.TabIndex = 5;
@@ -193,17 +334,6 @@
             this.lbPrefix.Size = new System.Drawing.Size(73, 13);
             this.lbPrefix.TabIndex = 1;
             this.lbPrefix.Text = "Prefix Formula";
-            // 
-            // btnRandom
-            // 
-            this.btnRandom.BackColor = System.Drawing.Color.DimGray;
-            this.btnRandom.ForeColor = System.Drawing.Color.White;
-            this.btnRandom.Location = new System.Drawing.Point(29, 466);
-            this.btnRandom.Name = "btnRandom";
-            this.btnRandom.Size = new System.Drawing.Size(236, 38);
-            this.btnRandom.TabIndex = 0;
-            this.btnRandom.Text = "Randomize";
-            this.btnRandom.UseVisualStyleBackColor = false;
             // 
             // pbTree
             // 
@@ -259,76 +389,69 @@
             this.lbTruthTable.TabIndex = 0;
             this.lbTruthTable.Text = "Truth Table";
             // 
-            // tbDisInfix
+            // tbNandHash
             // 
-            this.tbDisInfix.Location = new System.Drawing.Point(29, 235);
-            this.tbDisInfix.Name = "tbDisInfix";
-            this.tbDisInfix.Size = new System.Drawing.Size(464, 20);
-            this.tbDisInfix.TabIndex = 14;
+            this.tbNandHash.BackColor = System.Drawing.Color.Firebrick;
+            this.tbNandHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNandHash.ForeColor = System.Drawing.Color.White;
+            this.tbNandHash.Location = new System.Drawing.Point(543, 334);
+            this.tbNandHash.Name = "tbNandHash";
+            this.tbNandHash.Size = new System.Drawing.Size(111, 20);
+            this.tbNandHash.TabIndex = 26;
             // 
-            // label1
+            // label8
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 219);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "DisJunc Infix";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(540, 318);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Hash";
             // 
-            // tbDisPrefix
+            // tbNandDisjuncHash
             // 
-            this.tbDisPrefix.Location = new System.Drawing.Point(29, 186);
-            this.tbDisPrefix.Name = "tbDisPrefix";
-            this.tbDisPrefix.Size = new System.Drawing.Size(464, 20);
-            this.tbDisPrefix.TabIndex = 12;
+            this.tbNandDisjuncHash.BackColor = System.Drawing.Color.Firebrick;
+            this.tbNandDisjuncHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNandDisjuncHash.ForeColor = System.Drawing.Color.White;
+            this.tbNandDisjuncHash.Location = new System.Drawing.Point(543, 384);
+            this.tbNandDisjuncHash.Name = "tbNandDisjuncHash";
+            this.tbNandDisjuncHash.Size = new System.Drawing.Size(111, 20);
+            this.tbNandDisjuncHash.TabIndex = 28;
             // 
-            // label2
+            // label9
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 170);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "DisJunc Prefix";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(540, 368);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 13);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Hash";
             // 
-            // tbSimpleDisInfix
+            // tbNandSimpleHash
             // 
-            this.tbSimpleDisInfix.Location = new System.Drawing.Point(29, 334);
-            this.tbSimpleDisInfix.Name = "tbSimpleDisInfix";
-            this.tbSimpleDisInfix.Size = new System.Drawing.Size(464, 20);
-            this.tbSimpleDisInfix.TabIndex = 18;
+            this.tbNandSimpleHash.BackColor = System.Drawing.Color.Firebrick;
+            this.tbNandSimpleHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNandSimpleHash.ForeColor = System.Drawing.Color.White;
+            this.tbNandSimpleHash.Location = new System.Drawing.Point(543, 433);
+            this.tbNandSimpleHash.Name = "tbNandSimpleHash";
+            this.tbNandSimpleHash.Size = new System.Drawing.Size(111, 20);
+            this.tbNandSimpleHash.TabIndex = 30;
             // 
-            // label3
+            // label10
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 318);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Simplified DisJunc Infix";
-            // 
-            // tbSimpleDisPrefix
-            // 
-            this.tbSimpleDisPrefix.Location = new System.Drawing.Point(29, 285);
-            this.tbSimpleDisPrefix.Name = "tbSimpleDisPrefix";
-            this.tbSimpleDisPrefix.Size = new System.Drawing.Size(464, 20);
-            this.tbSimpleDisPrefix.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 269);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Simplified DisJunc Prefix";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(540, 417);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(32, 13);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Hash";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1112, 613);
+            this.ClientSize = new System.Drawing.Size(1260, 613);
             this.Controls.Add(this.splitContainer1);
             this.Name = "MainForm";
             this.Text = "Logica Simulator";
@@ -346,7 +469,6 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button btnRandom;
         private System.Windows.Forms.Label lbTruthTable;
         private System.Windows.Forms.Label lbPrefix;
         private System.Windows.Forms.TextBox tbHash;
@@ -371,6 +493,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbDisPrefix;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbNSimple;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbNdisjunc;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbN;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbNandSimpleHash;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbNandDisjuncHash;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbNandHash;
+        private System.Windows.Forms.Label label8;
     }
 }
 
